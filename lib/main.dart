@@ -8,24 +8,37 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          color: Colors.yellow,
+          color: Colors.white,
           child: Center(
-            child: Container(
-              alignment: Alignment.center,
-              width: 280.0,
-              height: 280.0,
-              color: Colors.orange,
-              child: Text(
-                'Styling stuff',
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 42.0,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: 'Roboto',
-                  fontStyle: FontStyle.italic,
+            child: Transform(
+              transform: Matrix4.identity(),
+              child: Container(
+                alignment: Alignment.center,
+                width: 280.0,
+                height: 280.0,
+                //color: Colors.blueAccent,
+                decoration: BoxDecoration(
+                  gradient: RadialGradient(colors: <Color>[
+                    Color(0xffef5350),
+                    Color(0x00ef5350),
+                  ]),
+                  borderRadius: BorderRadius.circular(10.0),
+                  border: Border.all(
+                    color: Colors.orange
+                  )
                 ),
-              ),
-            )
+                child: Text(
+                  'Styling stuff',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black54,
+                    fontSize: 42.0,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Roboto',
+                    fontStyle: FontStyle.normal,
+                  ),
+                ),
+              ),)
           ),
         ),
       ),
