@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
           color: Colors.cyan,
           child: Center(
             child: Transform(
-              transform: Matrix4.identity(),
+              alignment: Alignment.center,
+              transform: Matrix4.identity()..rotateZ(50.0),
               child: Container(
                 alignment: Alignment.center,
                 width: 300.0,
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
                     Colors.yellow.withOpacity(0.5),
                   ]),
                   //borderRadius: BorderRadius.circular(1000.0),
-                  border: Border.all(color: Colors.teal.withOpacity(0.3), width: 15.0),
+                  border: Border.all(color: Colors.teal.withOpacity(1.0), width: 15.0),
                   /*boxShadow: <BoxShadow>[
                     BoxShadow(color: Color(0xcc000000), offset: Offset(20.0, 30.0), blurRadius: 4.0),
                     BoxShadow(color: Color(0x80000000), offset: Offset(-20.0, 50.0), blurRadius: 2.0),
@@ -31,6 +32,8 @@ class MyApp extends StatelessWidget {
                   shape: BoxShape.circle,
                 ),
                 child: RichText(
+                  //TEXT ALIGMENT
+                  textAlign: TextAlign.center,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 3,
                     text: TextSpan(
