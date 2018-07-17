@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          color: Colors.white,
+          color: Colors.cyan,
           child: Center(
             child: Transform(
               transform: Matrix4.identity(),
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: RadialGradient(colors: <Color>[
                     Colors.teal,
-                    Colors.yellow.withOpacity(0.2),
+                    Colors.yellow.withOpacity(0.5),
                   ]),
                   //borderRadius: BorderRadius.circular(1000.0),
                   border: Border.all(color: Colors.teal.withOpacity(0.3), width: 15.0),
