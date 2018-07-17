@@ -10,15 +10,22 @@ class MyApp extends StatelessWidget {
         body: Container(
           color: Colors.yellow,
           child: Center(
-            child: Text(
-              'Styling stuff',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 42.0,
-                fontWeight: FontWeight.w900,
-                fontFamily: 'Georgia',
+            child: Container(
+              alignment: Alignment.center,
+              width: 280.0,
+              height: 280.0,
+              color: Colors.orange,
+              child: Text(
+                'Styling stuff',
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 42.0,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: 'Roboto',
+                  fontStyle: FontStyle.italic,
+                ),
               ),
-            ),
+            )
           ),
         ),
       ),
