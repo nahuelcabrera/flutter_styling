@@ -14,23 +14,25 @@ class MyApp extends StatelessWidget {
               transform: Matrix4.identity(),
               child: Container(
                 alignment: Alignment.center,
-                width: 280.0,
-                height: 280.0,
+                width: 300.0,
+                height: 300.0,
                 //color: Colors.blueAccent,
                 decoration: BoxDecoration(
                   gradient: RadialGradient(colors: <Color>[
-                    Color(0xffef5350),
-                    Color(0x00ef5350),
+                    Colors.teal,
+                    Colors.yellow.withOpacity(0.2),
                   ]),
                   //borderRadius: BorderRadius.circular(1000.0),
-                  //border: Border.all(color: Colors.orange),
-                  boxShadow: <BoxShadow>[
+                  border: Border.all(color: Colors.teal.withOpacity(0.3), width: 15.0),
+                  /*boxShadow: <BoxShadow>[
                     BoxShadow(color: Color(0xcc000000), offset: Offset(20.0, 30.0), blurRadius: 4.0),
                     BoxShadow(color: Color(0x80000000), offset: Offset(-20.0, 50.0), blurRadius: 2.0),
-                  ],
-                  shape: BoxShape.rectangle,
+                  ],*/
+                  shape: BoxShape.circle,
                 ),
                 child: RichText(
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 3,
                     text: TextSpan(
                       style: TextStyle(
                         color: Colors.white,
@@ -38,16 +40,17 @@ class MyApp extends StatelessWidget {
                       ),
                       children: <TextSpan>[
                         TextSpan(
-                          text: 'Styling ',
+                          text: 'Styling a bunch of Widgets ',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.white,
                             fontSize: 28.0,
+                              fontWeight: FontWeight.w300
                           ),),
                         TextSpan(
-                          text: 'Stuff papa',
+                          text: 'Stuff in Flutter by Nahuel Cabrera',
                           style: TextStyle(
-                            color: Colors.white.withOpacity(0.3),
-                            fontWeight: FontWeight.w700
+                            color: Colors.black.withOpacity(0.4),
+                            fontWeight: FontWeight.w900
                           ),),
                       ]
                     )
